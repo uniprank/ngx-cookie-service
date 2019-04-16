@@ -2,9 +2,7 @@
 [![npm downloads](https://img.shields.io/npm/dm/@uniprank/ngx-cookie-service.svg?style=flat)](https://npmjs.org/package/@uniprank/ngx-cookie-service)
 [![npm license](https://img.shields.io/npm/l/@uniprank/ngx-cookie-service.svg)](https://npmjs.org/package/@uniprank/ngx-cookie-service)
 
-You can use this angular service to spy scroll events from `window` or any other scrollable element.
-
-This library implements an service to collect observables from scroll spy directives. It can be used to create you own components or if you prefer use one of the following directives.
+This is an copy of an existing [project](https://github.com/7leads/ngx-cookie-service) because the other version doesn't fit with JEST and other testing setups.
 
 See Examples here [Example](https://uniprank.github.io/ngx-cookie-service/test-cases)
 
