@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## 1.0.2 - 2019-04-16
+## [1.0.2] - 2020-02-28
 
 ### Changed
 
@@ -22,4 +22,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   create an inital setup for the cookie service
 
 [unreleased]: https://github.com/uniprank/ngx-cookie-service
-[1.0.2]: https://github.com/uniprank/ngx-cookie-service
+[1.0.2]: https://github.com/uniprank/ngx-cookie-service/tree/1.0.2
