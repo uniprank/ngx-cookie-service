@@ -9,7 +9,7 @@ import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 export class CookieService {
     private readonly documentIsAccessible: boolean;
 
-    constructor(@Inject(DOCUMENT) private document: any, @Inject(PLATFORM_ID) private platformId: InjectionToken<Object>) {
+    constructor(@Inject(DOCUMENT) private document: any, @Inject(PLATFORM_ID) private platformId: InjectionToken<object>) {
         this.documentIsAccessible = isPlatformBrowser(this.platformId);
     }
 
@@ -54,13 +54,13 @@ export class CookieService {
         const document: any = this.document;
 
         if (document.cookie && document.cookie !== '') {
-            const split: Array<string> = document.cookie.split(';');
+            const splits: Array<{ key: string; value: any }> = document.cookie.split(';').map((_value) => {
+                const currentCookie: Array<string> = _value.split('=');
+                return { key: decodeURIComponent(currentCookie[0].replace(/^ /, '')), value: decodeURIComponent(currentCookie[1]) };
+            });
 
-            for (let i = 0; i < split.length; i += 1) {
-                const currentCookie: Array<string> = split[i].split('=');
-
-                currentCookie[0] = currentCookie[0].replace(/^ /, '');
-                cookies[decodeURIComponent(currentCookie[0])] = decodeURIComponent(currentCookie[1]);
+            for (const _split of splits) {
+                cookies[_split.key] = _split.value;
             }
         }
 
