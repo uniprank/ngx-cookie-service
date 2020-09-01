@@ -14,13 +14,13 @@
                     "options": {
                         "tsConfig": "library/ngx-cookie-service/tsconfig.lib.json",
                         "project": "library/ngx-cookie-service/ng-package.json"
+                    },
+                    "configurations": {
+                        "production": {
+                            "tsConfig": "library/ngx-cookie-service/tsconfig.lib.prod.json"
+                        }
                     }
-                ,          "configurations": {
-            "production": {
-              "tsConfig": "library/ngx-cookie-service/tsconfig.lib.prod.json"
-            }
-          }
-},
+                },
                 "test": {
                     "builder": "@angular-builders/jest:run",
                     "options": {
@@ -32,13 +32,8 @@
                 "lint": {
                     "builder": "@angular-devkit/build-angular:tslint",
                     "options": {
-                        "tsConfig": [
-                            "library/ngx-cookie-service/tsconfig.lib.json",
-                            "library/ngx-cookie-service/tsconfig.spec.json"
-                        ],
-                        "exclude": [
-                            "**/node_modules/**"
-                        ]
+                        "tsConfig": ["library/ngx-cookie-service/tsconfig.lib.json", "library/ngx-cookie-service/tsconfig.spec.json"],
+                        "exclude": ["**/node_modules/**"]
                     }
                 }
             }
@@ -57,35 +52,30 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-            "aot": true,
+                        "aot": true,
                         "baseHref": "/ngx-cookie-service/test-cases/",
                         "outputPath": "docs/test-cases",
                         "index": "library/TestCases/src/index.html",
                         "main": "library/TestCases/src/main.ts",
                         "polyfills": "library/TestCases/src/polyfills.ts",
                         "tsConfig": "library/TestCases/tsconfig.app.json",
-                        "assets": [
-                            "library/TestCases/src/favicon.ico",
-                            "library/TestCases/src/assets"
-                        ],
-                        "styles": [
-                            "library/TestCases/src/styles.scss",
-                            "node_modules/prismjs/themes/prism-solarizedlight.css"
-                        ],
+                        "assets": ["library/TestCases/src/favicon.ico", "library/TestCases/src/assets"],
+                        "styles": ["library/TestCases/src/styles.scss", "node_modules/prismjs/themes/prism-solarizedlight.css"],
                         "scripts": [
                             "node_modules/marked/lib/marked.js",
                             "node_modules/prismjs/prism.js",
                             "node_modules/prismjs/components/prism-typescript.min.js",
                             "node_modules/prismjs/components/prism-css.min.js"
-                        ],
-                        "es5BrowserSupport": true
+                        ]
                     },
                     "configurations": {
                         "production": {
-                            "fileReplacements": [{
-                                "replace": "library/TestCases/src/environments/environment.ts",
-                                "with": "library/TestCases/src/environments/environment.prod.ts"
-                            }],
+                            "fileReplacements": [
+                                {
+                                    "replace": "library/TestCases/src/environments/environment.ts",
+                                    "with": "library/TestCases/src/environments/environment.prod.ts"
+                                }
+                            ],
                             "optimization": true,
                             "outputHashing": "all",
                             "sourceMap": false,
@@ -96,16 +86,16 @@
                             "vendorChunk": false,
                             "buildOptimizer": true,
                             "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb"
-                }
-              ]
+                                {
+                                    "type": "initial",
+                                    "maximumWarning": "2mb",
+                                    "maximumError": "5mb"
+                                },
+                                {
+                                    "type": "anyComponentStyle",
+                                    "maximumWarning": "6kb"
+                                }
+                            ]
                         }
                     }
                 },
@@ -134,26 +124,16 @@
                         "main": "library/TestCases/src/test.ts",
                         "polyfills": "library/TestCases/src/polyfills.ts",
                         "tsConfig": "library/TestCases/tsconfig.spec.json",
-                        "styles": [
-                            "library/TestCases/src/styles.scss"
-                        ],
+                        "styles": ["library/TestCases/src/styles.scss"],
                         "scripts": [],
-                        "assets": [
-                            "library/TestCases/src/favicon.ico",
-                            "library/TestCases/src/assets"
-                        ]
+                        "assets": ["library/TestCases/src/favicon.ico", "library/TestCases/src/assets"]
                     }
                 },
                 "lint": {
                     "builder": "@angular-devkit/build-angular:tslint",
                     "options": {
-                        "tsConfig": [
-                            "library/TestCases/tsconfig.app.json",
-                            "library/TestCases/tsconfig.spec.json"
-                        ],
-                        "exclude": [
-                            "**/node_modules/**"
-                        ]
+                        "tsConfig": ["library/TestCases/tsconfig.app.json", "library/TestCases/tsconfig.spec.json"],
+                        "exclude": ["**/node_modules/**"]
                     }
                 }
             }
