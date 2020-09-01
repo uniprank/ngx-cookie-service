@@ -22,11 +22,11 @@
                     }
                 },
                 "test": {
-                    "builder": "@angular-builders/jest:run",
+                    "builder": "@angular-devkit/build-angular:karma",
                     "options": {
-                        "no-cache": true,
                         "main": "library/ngx-cookie-service/src/test.ts",
-                        "tsConfig": "library/ngx-cookie-service/tsconfig.spec.json"
+                        "tsConfig": "library/ngx-cookie-service/tsconfig.spec.json",
+                        "karmaConfig": "library/ngx-cookie-service/karma.conf.js"
                     }
                 },
                 "lint": {

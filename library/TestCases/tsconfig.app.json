@@ -2,13 +2,13 @@
     "extends": "../../tsconfig.base.json",
     "compilerOptions": {
         "outDir": "../../out-tsc/app",
-        "types": ["node"]
+        "types": ["node"],
+        "paths": {
+            "@uniprank/ngx-cookie-service": ["dist/ngx-cookie-service"],
+            "@uniprank/ngx-cookie-service/*": ["dist/ngx-cookie-service/*"],
+            "styles-test-cases": ["library/TestCases/src/styles"]
+        }
     },
-  "files": [
-    "src/main.ts",
-    "src/polyfills.ts"
-  ],
-  "include": [
-    "library/TestCases/src/**/*.d.ts"
-  ]
+    "files": ["src/main.ts", "src/polyfills.ts"],
+    "include": ["library/TestCases/src/**/*.d.ts"]
 }
