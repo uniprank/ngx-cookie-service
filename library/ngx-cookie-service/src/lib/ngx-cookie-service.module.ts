@@ -10,7 +10,7 @@ const providers: Provider[] = [CookieService];
     exports: [...directives, ...components]
 })
 export class NgxCookieServiceModule {
-    static forRoot(): ModuleWithProviders {
+    static forRoot(): ModuleWithProviders<NgxCookieServiceModule> {
         return {
             ngModule: NgxCookieServiceModule,
             providers: [...providers]
