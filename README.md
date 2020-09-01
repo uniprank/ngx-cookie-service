@@ -7,6 +7,7 @@ This is an copy of an existing [project](https://github.com/7leads/ngx-cookie-se
 See Examples here [Example](https://uniprank.github.io/ngx-cookie-service/test-cases)
 
 Updated for Angular 10: v1.1.0
+
 Angular < 10 please use v1.0.2
 
 ## Installation
