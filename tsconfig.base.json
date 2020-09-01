@@ -1,0 +1,23 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "baseUrl": "./",
+        "downlevelIteration": true,
+        "outDir": "./dist/out-tsc",
+        "sourceMap": true,
+        "declaration": false,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "target": "es2015",
+        "typeRoots": ["node_modules/@types", "typings.d.ts"],
+        "lib": ["es2018", "dom"],
+        "paths": {
+            "@uniprank/ngx-cookie-service": ["dist/ngx-cookie-service"],
+            "@uniprank/ngx-cookie-service/*": ["dist/ngx-cookie-service/*"],
+            "styles-test-cases": ["library/TestCases/src/styles"]
+        }
+    }
+}
