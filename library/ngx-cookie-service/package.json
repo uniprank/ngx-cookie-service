@@ -1,6 +1,6 @@
 {
     "name": "@uniprank/ngx-cookie-service",
-    "version": "1.0.2",
+    "version": "1.1.0",
     "author": {
         "name": "Dennis Fiedler",
         "email": "npm-package@uniprank.com",
@@ -9,7 +9,7 @@
     "license": "MIT",
     "keywords": [
         "angular",
-        "angular 7",
+        "angular 10",
         "cookie service",
         "ngx cookie service",
         "ngx",
@@ -20,7 +20,7 @@
     "description": "Simple library to deal with cookies in Angular.",
     "private": false,
     "peerDependencies": {
-        "@angular/common": ">=7.2.0",
-        "@angular/core": ">=7.2.0"
+        "@angular/common": ">=10.0.0",
+        "@angular/core": ">=10.0.0"
     }
 }
